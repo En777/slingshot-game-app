@@ -81,7 +81,15 @@ module.exports = function (options) {
             loader: 'babel-loader',
             options: {
               presets: ['env'],
-              plugins: ['transform-runtime', 'transform-object-rest-spread']
+              plugins: [
+                'transform-runtime',
+                'transform-object-rest-spread',
+                // 组件使用 webpack 异步导入 import() 报错
+                // Unexpected token when using webpack import()
+                // https://github.com/babel/babel-loader/issues/493
+                // https://github.com/babel/babel-loader/issues/493#issuecomment-358759350
+                'syntax-dynamic-import'
+              ]
             }
           }
         }
