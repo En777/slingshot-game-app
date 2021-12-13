@@ -4,7 +4,8 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
-const entryFile = path.join(__dirname + '/../src/main.js');
+// const entryFile = path.join(__dirname + '/../src/main.js');
+const entryFile = path.join(__dirname + '/../src/game.js');
 
 module.exports = function (options) {
   return {
