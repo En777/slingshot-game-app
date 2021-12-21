@@ -2,9 +2,13 @@
 
 游戏基于 matter.js 引擎，可以快速实现物理弹跳、碰撞等游戏特效。
 
-打包 App 基于 Cordova 和 Github Actions。
+[下载试玩](https://github.com/En777/slingshot-game-app/releases)
 
-Git 仓库推送一个 tag 到 Github 仓库， Actions 会自动打包构建，得到一个app文件: xx.apk，并发布到 release 页面。
+本程序使用 Cordova 把 web 代码包装成了 app。
+
+打包和发布使用 Github Actions 服务，提交代码到 Github， 就会自动打包构建，得到一个app文件: xx.apk，并发布到 release 页面。
+
+自动化CICD打包发布，体验很不错，感谢 Github。
 
 Cordova 环境搭建依赖 java jdk 1.8 和 Node.js，目前在环境配置已经在 `/.github/workflows/main.yml` 配置完成。
 
